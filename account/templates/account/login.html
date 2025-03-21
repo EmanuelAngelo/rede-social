@@ -1,17 +1,13 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
-
-{% block title %}
-    Login
-{% endblock title %}
-
+{% block title %}Entrar{% endblock %}
 
 {% block content %}
-    <h1>Log-in</h1>
-    <p>Porfavor, use o formulario de login:</p>
-    <form method="post">
-        {{form.as_p}}
-        {% csrf_token %}
-        <p><input type="submit" value="Login"></p>
-    </form>
-    {% endblock content %}   
+  <h1>Entrar</h1>
+  <p>Por favor, use o formulário abaixo para entrar:</p>
+  <form method="post">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <p><input type="submit" value="Entrar"></p>
+  </form>
+{% endblock %}
